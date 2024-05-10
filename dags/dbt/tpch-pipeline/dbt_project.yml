@@ -30,7 +30,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Override by specifying the `{{ config(...) }}` macro in individual DBT models
 models:
   pipeline:
-  # Config indicated by + and applies to all files under folder 
+  # Config indicated by + and applies to all files under folder
     staging:
       +materialized: view
       snowflake_warehouse: dbt_wh
