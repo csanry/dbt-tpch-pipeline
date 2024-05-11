@@ -2,13 +2,13 @@ snowflake:
   outputs:
     dev:
       type: snowflake
-      account: "{{ env_var('DBT_ACCOUNT') }}" 
-      user: "{{ env_var('DBT_USER') }}" 
-      password: "{{ env_var('DBT_PASSWORD') }}"
-      role: dbt_role 
-      warehouse: dbt_wh
-      database: dbt_db
-      schema: dbt_schema
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT', 'fs77924.europe-west4.gcp') }}" 
+      user: "{{ env_var('DBT_SNOWFLAKE_USER', 'csanry') }}" 
+      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('DBT_ROLE', 'dbt_role') }}" 
+      warehouse: "{{ env_var('DBT_WH', 'dbt_wh') }}"
+      database: "{{ env_var('DBT_DB', 'dbt_db') }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'dbt_schema') }}"
       client_session_keep_alive: False
       threads: 10
       connect_retries: 0
