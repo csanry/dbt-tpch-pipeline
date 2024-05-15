@@ -1,6 +1,8 @@
-# Data Engineering Pipeline - TPCH project
+<div align="center">
+<h1>🔧 Data Engineering Pipeline - TPCH project</h1>
 
-ELT pipeline built with DBT, Snowflake, Airflow
+<h3>ELT pipeline built with DBT, Snowflake, Airflow</h3>
+</div>
 
 ## Table of Contents
 
@@ -17,59 +19,63 @@ ELT pipeline built with DBT, Snowflake, Airflow
 
 This project utilises to DBT, Snowflake and Airflow to build a data pipeline that processes the TPCH benchmark data within a Snowflake data warehouse.
 
-Repository organisation
+<details open>
+  <summary>Repository organisation</summary>
 
-```
-.
-├── Dockerfile
-├── LICENSE
-├── Makefile
-├── README.md
-├── airflow_settings.yaml
-├── dags
-│   ├── dbt
-│   │   └── tpch-pipeline
-│   └── dbt_dag.py
-├── include
-├── packages.txt
-├── plugins
-├── poetry.lock
-├── pyproject.toml
-├── requirements.txt
-└── tests
-    └── dags
-        └── test_dag.py
-```
+  ```
+  .
+  ├── Dockerfile
+  ├── LICENSE
+  ├── Makefile
+  ├── README.md
+  ├── airflow_settings.yaml
+  ├── dags
+  │   ├── dbt
+  │   │   └── tpch-pipeline
+  │   └── dbt_dag.py
+  ├── include
+  ├── packages.txt
+  ├── plugins
+  ├── poetry.lock
+  ├── pyproject.toml
+  ├── requirements.txt
+  └── tests
+      └── dags
+          └── test_dag.py
+  ```
+</details>
 
-DBT organisation
-
-```
-dags/dbt
-└── tpch-pipeline
-    ├── analyses
-    ├── dbt_packages
-    │   └── dbt_utils
-    ├── dbt_project.yml
-    ├── logs
-    │   └── dbt.log
-    ├── macros
-    │   └── discounted_amount.sql
-    ├── models
-    │   ├── intermediate
-    │   ├── marts
-    │   └── staging
-    ├── package-lock.yml
-    ├── packages.yml
-    ├── profiles.yml
-    ├── scripts
-    │   ├── setup_dwh.sql
-    │   └── teardown_dwh.sql
-    ├── seeds
-    ├── snapshots
-    └── tests
-        ├── fct_orders_date_valid.sql
-        └── fct_orders_discount.sql
-```
+<details open>
+  <summary>DBT organisation</summary>
+    
+  ```
+  dags/dbt
+  └── tpch-pipeline
+      ├── analyses
+      ├── dbt_packages
+      │   └── dbt_utils
+      ├── dbt_project.yml
+      ├── logs
+      │   └── dbt.log
+      ├── macros
+      │   └── discounted_amount.sql
+      ├── models
+      │   ├── intermediate
+      │   ├── marts
+      │   └── staging
+      ├── package-lock.yml
+      ├── packages.yml
+      ├── profiles.yml
+      ├── scripts
+      │   ├── setup_dwh.sql
+      │   └── teardown_dwh.sql
+      ├── seeds
+      ├── snapshots
+      └── tests
+          ├── fct_orders_date_valid.sql
+          └── fct_orders_discount.sql
+  ```
+</details>
 
 ## Workflow <a name="2"></a>
 
