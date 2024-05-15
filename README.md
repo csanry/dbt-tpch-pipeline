@@ -114,6 +114,22 @@ Before running this pipeline, make sure you have the following prerequisites ins
 
 - python `3.10`
 
+Next, create a `.env` file in the root directory with the necessary credentials - this is needed to set up the DBT Snowflake connection. An example of the configuration needed can be found in [dev.example.env](/dev.example.env)
+
+<details>
+  <summary>Example config</summary>
+
+  ```
+  DBT_SNOWFLAKE_ACCOUNT="fs77924.europe-west4.gcp"
+  DBT_SNOWFLAKE_USER="csanry"
+  DBT_SNOWFLAKE_PASSWORD="set-password-here"
+  DBT_ROLE="dbt_role"
+  DBT_WH="dbt_wh"
+  DBT_DB="dbt_db"
+  DBT_SCHEMA="dbt_schema"
+  ```
+</details>
+
 ### Poetry environment
 
 To setup the poetry environment run
